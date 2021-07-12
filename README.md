@@ -113,12 +113,12 @@ To train a model, run the following scripts. All our models are trained with 8 G
  
 **You can replace binary neural networks with any kinds of efficient/compact models on one-step training.**
 
-### 2. Testing:
+### 3. Testing:
 
 * To linearly evaluate a model, run the following script:
 
   ```shell
-  CUDA_VISIBLE_DEVICES=0,1,2,3 python main_lincls.py  --lr 0.1  -j 24  --batch-size 256  --pretrained  /home/szq/projects/s2bnn/checkpoint_0199.pth.tar --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] 
+  python main_lincls.py  --lr 0.1  -j 24  --batch-size 256  --pretrained  /home/szq/projects/s2bnn/checkpoint_0199.pth.tar --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] 
 
   ```
 
