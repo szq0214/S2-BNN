@@ -58,6 +58,8 @@ To train a model, run the following scripts. All our models are trained with 8 G
   ```
   
 #### Our MoCo V2 + Distillation Loss:
+Download real-valued teacher network [here](https://dl.fbaipublicfiles.com/moco/moco_checkpoints/moco_v2_800ep/moco_v2_800ep_pretrain.pth.tar). We use MoCo V2 800-epoch pretrained model, while you can choose other stronger self-supervised models as the teachers.
+
 #### Step 1:
 
   ```shell
