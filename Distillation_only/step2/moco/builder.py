@@ -112,7 +112,7 @@ class MoCo(nn.Module):
 
         return x_gather[idx_this]
 
-    def forward(self, im_q, im_k):
+    def forward(self, im_q):
 
         # compute query features
         q = self.encoder_q(im_q)  # queries: NxC

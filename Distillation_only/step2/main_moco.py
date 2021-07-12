@@ -356,7 +356,7 @@ def train(train_loader, model, model_real, criterion, criterion_kd, optimizer, e
         gt = gt.cuda(args.gpu, non_blocking=True)
 
         # compute output
-        student_output = model(im_q=images[0], im_k=images[1])
+        student_output = model(im_q=images[0])
         teacher_output = model_real(im_q=images[0])
  
         loss_kd = criterion_kd(student_output/args.moco_t, teacher_output/args.moco_t)
