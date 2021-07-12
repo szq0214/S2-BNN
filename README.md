@@ -4,7 +4,7 @@ This is the official pytorch implementation of our paper:
 
  ["S2-BNN: Bridging the Gap Between Self-Supervised Real and 1-bit Neural Networks via Guided Distribution Calibration"](https://arxiv.org/abs/2102.08946) (CVPR 2021)
  
- by [Zhiqiang Shen](http://zhiqiangshen.com/), [Zechun Liu](https://zechunliu.com/), [Jie Qin](https://sites.google.com/site/firmamentqj/), [Lei Huang](https://huangleibuaa.github.io/), [Kwang-Ting Cheng](https://seng.ust.hk/about/people/faculty/tim-kwang-ting-cheng?id=326) and [Marios Savvides](https://www.cmu-biometrics.org/).
+ by [Zhiqiang Shen](http://zhiqiangshen.com/), [Zechun Liu](https://zechunliu.com/), [Jie Qin](https://sites.google.com/site/firmamentqj/), [Lei Huang](https://huangleibuaa.github.io/), [Kwang-Ting Cheng](https://seng.ust.hk/about/people/faculty/tim-kwang-ting-cheng?id=326) and [Marios Savvides](https://www.ece.cmu.edu/directory/bios/savvides-marios.html).
 
 <div align=center>
 <img width=99% src="./imgs/s2bnn.png"/>
