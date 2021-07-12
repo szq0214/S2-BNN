@@ -211,7 +211,7 @@ def main_worker(gpu, ngpus_per_node, args):
     optimizer_sgd = torch.optim.SGD(model.parameters(), args.lr,
                                 momentum=args.momentum,
                                 weight_decay=args.weight_decay)
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=0) #3e-4
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay) 
 
     # load real-valued network
     if os.path.isfile(args.teacher_path):

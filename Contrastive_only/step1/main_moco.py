@@ -197,7 +197,7 @@ def main_worker(gpu, ngpus_per_node, args):
     optimizer_sgd = torch.optim.SGD(model.parameters(), args.lr,
                                 momentum=args.momentum,
                                 weight_decay=args.weight_decay)
-    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=0) #3e-4
+    optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, weight_decay=args.weight_decay) 
 
     # optionally resume from a checkpoint
     if args.resume:
@@ -327,10 +327,10 @@ def train(train_loader, model, criterion, optimizer, epoch, args):
             progress.display(i)
 
 
-def save_checkpoint(state, is_best, filename='w_gt_checkpoint.pth.tar'):
+def save_checkpoint(state, is_best, filename='checkpoint.pth.tar'):
     torch.save(state, filename)
     if is_best:
-        shutil.copyfile(filename, 'w_gt_model_best.pth.tar')
+        shutil.copyfile(filename, 'model_best.pth.tar')
 
 
 class AverageMeter(object):

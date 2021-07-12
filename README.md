@@ -62,14 +62,14 @@ To train a model, run the following scripts. All our models are trained with 8 G
 
   ```shell
   cd Contrastive+Distillation/step1
-  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
+  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48 --wd 0  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
   ```
 
 #### Step 2:
 
   ```shell
   cd Contrastive+Distillation/step2
-  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar --model-path ../step1/checkpoint_0199.pth.tar
+  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48 --wd 0  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar --model-path ../step1/checkpoint_0199.pth.tar
   ```
   
 #### Our Distillation Loss Only:
@@ -77,14 +77,14 @@ To train a model, run the following scripts. All our models are trained with 8 G
 
   ```shell
   cd Distillation_only/step1
-  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
+  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48 --wd 0 --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
   ```
 
 #### Step 2:
 
   ```shell
   cd Distillation_only/step2
-  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar --model-path ../step1/checkpoint_0199.pth.tar
+  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48 --wd 0 --teacher-path ../../moco_v2_800ep_pretrain.pth.tar --model-path ../step1/checkpoint_0199.pth.tar
   ```
 
 ### 2. Simple One-Step Training (Conventional):
@@ -100,14 +100,14 @@ To train a model, run the following scripts. All our models are trained with 8 G
 
   ```shell
   cd Contrastive+Distillation/step2
-  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
+  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48 --wd 0 --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
   ```
   
 #### Our Distillation Loss Only:
   
   ```shell
   cd Distillation_only/step2
-  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48  --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
+  python main_moco.py --lr 0.0003 --batch-size 256 --dist-url 'tcp://localhost:10001' --multiprocessing-distributed --world-size 1 --rank 0 [imagenet-folder with train and val folders] --mlp --moco-t 0.2 --aug-plus --cos -j 48 --wd 0 --teacher-path ../../moco_v2_800ep_pretrain.pth.tar 
   ```
   
  
