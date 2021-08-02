@@ -127,7 +127,7 @@ Download real-valued teacher network [here](https://dl.fbaipublicfiles.com/moco/
   
 ## Results & Models
 
-We provide pre-trained models with different training strategies, we report in the table #epochs, OPs, Top-1 accuracy on ImageNet validation set:
+We provide pre-trained models with different training strategies, we report in the table #Epochs, FLOPs, OPs, Top-1 accuracy on ImageNet validation set:
 
 | Models | #Epoch | FLOPs (x10<sup>8</sup>)| OPs (x10<sup>8</sup>) | Top-1 (%) | Trained models |
 | :---: | :-: | :-: | :-: | :------:| :------: | 
