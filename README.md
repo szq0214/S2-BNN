@@ -14,7 +14,7 @@ In this paper, we introduce a simple yet effective self-supervised approach usin
 
 **The student models are not restricted to the binary neural networks, you can replace with any efficient/compact models.**
 
-##News:
+## News
 
 **[Aug. 18, 2021]** Add ResNet-50 result as the student (real-valued model) with [SwAV/RN50-w4](https://github.com/facebookresearch/swav) as the teacher.
 
