@@ -14,6 +14,17 @@ In this paper, we introduce a simple yet effective self-supervised approach usin
 
 **The student models are not restricted to the binary neural networks, you can replace with any efficient/compact models.**
 
+##News:
+
+**[Aug. 18, 2021]** Add ResNet-50 result as the student (real-valued model) with [SwAV/RN50-w4](https://github.com/facebookresearch/swav) as the teacher.
+
+| Models | Pre-train epochs | batch size| linear cls. log | Top-1 (%) | Pre-train models |
+| :---: | :-: | :-: | :-: | :------:| :------: | 
+| [SimSiam](https://arxiv.org/abs/2011.10566) | 100 | 512 | [log](https://dl.fbaipublicfiles.com/simsiam/logs/100ep/linear.log) | 68.1 | [GitHub](https://github.com/facebookresearch/simsiam) |
+| S2-BNN (Distillation_only) | 100 | 512 | [log](https://drive.google.com/file/d/1FIbcJ38_HzCuCIyPg3uPuoeD0_F6Fipj/view?usp=sharing) | **68.7** | [Download](https://drive.google.com/file/d/1eY-iVkYxxJfLhfeFBvStDzhtY3ns0p7S/view?usp=sharing) |
+
+Note that we use the same linear evaluation procedure as [SimSiam](https://github.com/facebookresearch/simsiam).
+
 ## Citation
 
 If you find our code is helpful for your research, please cite:
